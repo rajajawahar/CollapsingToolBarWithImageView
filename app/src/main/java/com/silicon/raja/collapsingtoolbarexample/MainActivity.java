@@ -5,7 +5,6 @@ import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
 import android.view.View;
 
 
@@ -24,15 +23,12 @@ public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOf
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-//        ActionBar actionBar = getSupportActionBar();
-//        actionBar.setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
         getSupportActionBar().setTitle("");
+        collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
         appBarLayout = (AppBarLayout) findViewById(R.id.app_bar_layout);
         toolbarHeaderView = (HeaderView) findViewById(R.id.toolbar_header_view);
         floatHeaderView = (HeaderView) findViewById(R.id.float_header_view);
-        floatHeaderView.setGravity(Gravity.CENTER);
         toolbarHeaderView.bindTo("3 Years", "Android Developer");
         floatHeaderView.bindTo("Raja Mohamed", "Orgware Technologies");
 
